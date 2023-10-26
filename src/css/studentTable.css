@@ -1,0 +1,121 @@
+.table-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 2px solid var(--mainColor);
+  background-color: var(--black);
+  border-radius: 5px;
+
+}
+.table-holder {
+  width: 100%;
+  overflow: auto;
+  padding: 10px;
+  height: 300px;
+  &::-webkit-scrollbar {
+    scroll-behavior: smooth;
+    height: 10px;
+    background-color: transparent;
+    margin-bottom: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    scroll-behavior: smooth;
+    width: 200px;
+    background-color: red;
+    border-radius: 10px;
+    background-color: var(--grey);
+  }
+  &::-webkit-scrollbar-corner {
+    width: 0;
+    height: 0;
+  }
+}
+.table {
+  border: 2px solid var(--mainColor);
+  margin-bottom: 10px;
+  width: fit-content;
+
+}
+.table .table-head {
+  width: 100%;
+  display: block;
+}
+.table .table-body {
+  width: 100%;
+  display: block;
+}
+.table .table-row {
+  width: 100%;
+  display: flex;
+}
+.table span {
+  display: flex;
+  height: 70px;
+  width: 100%;
+  width: 70px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--mainColor);
+  position: relative;
+
+  &.lectureEle i {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--mainColor);
+    font-size: .8em;
+    letter-spacing: 1px;
+  }
+}
+
+.table span input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+  height: 100%;
+  background-color: transparent;
+}
+.table span input[type="checkbox"]::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  content: "";
+  display: flex;
+  color: white;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../imgs/true.svg);
+  background-size: cover;
+  opacity: 0;
+  transition: .2s;
+}
+.table span input[type="checkbox"]:checked::before {
+  opacity: 1;
+}
+.student .details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  gap: 10px;
+  align-items: center;
+  margin-top: 20px;
+  & > span {
+    border-radius: 5px;
+    height: 50px;
+    margin-top: 0 !important;
+    margin-bottom: 0;
+    background-color: var(--mainColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+  }
+}
+
+

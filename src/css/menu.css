@@ -1,0 +1,34 @@
+.menu {
+  width: 100%;
+  height: 0%;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  transition: 1.5s cubic-bezier(1, -0.27, 0.33, 0.82) ;
+  z-index: 1000;
+  left: 0;
+  overflow: hidden;
+  text-transform: capitalize;
+  &.active {
+    height: 100%;
+  }
+}
+.menu ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: white;
+  padding: 20px;
+  overflow: hidden;
+}
+.menu ul li {
+  font-size: 2em;
+  font-weight: 600;
+  opacity: 0;
+  transition: 1s;
+  &.show {
+    opacity: 1;
+  }
+}
