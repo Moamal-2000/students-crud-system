@@ -1,9 +1,9 @@
 import { v4 as uuid } from "uuid";
-import { useGlobalContextFunc } from "../contexts/globalContext";
+import { useGlobalContextFunc } from "../contexts/GlobalContext";
 import { days, months } from "../data/staticData";
 import tableDataSetter from "../hooks/tableDataSetter";
 
-import "../css/mainForm.css"
+import "../css/MainForm.css"
 
 function MainForm() {
   const {
@@ -13,10 +13,6 @@ function MainForm() {
     setRenderMainForm,
     setStudentsClone,
   } = useGlobalContextFunc();
-
-
-
-
 
 
 

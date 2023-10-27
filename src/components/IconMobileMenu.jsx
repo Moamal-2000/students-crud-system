@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { useGlobalContextFunc } from "../contexts/globalContext";
+import { useGlobalContextFunc } from "../contexts/GlobalContext";
 
 const IconMenu = () => {
   const { showMenu, setShowMenu } = useGlobalContextFunc();

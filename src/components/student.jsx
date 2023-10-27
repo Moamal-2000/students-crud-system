@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { useGlobalContextFunc } from "../contexts/globalContext";
-import StudentDefaultMode from "./studentDefaultMode";
-import StudentEditMode from "./studentEditMode";
-import StudentTable from "./studentTable";
-import "../css/student.css"
+import { useGlobalContextFunc } from "../contexts/GlobalContext";
+import "../css/Student.css";
+import StudentDefaultMode from "./StudentDefaultMode";
+import StudentEditMode from "./StudentEditMode";
+import StudentTable from "./StudentTable";
 
 function Student({ student, index }) {
   const { removeStudent } = useGlobalContextFunc();
@@ -12,7 +12,7 @@ function Student({ student, index }) {
     (input) =>
       input != "tableData" &&
       !input.includes("-day") &&
-      !input.includes("-month") 
+      !input.includes("-month")
   );
 
   return (
@@ -42,18 +42,15 @@ function Student({ student, index }) {
         />
       )}
       <div className="btns-holder">
-        {
-          !isEdit && (
-            <button className="btn" onClick={() => setIsEdit(!isEdit)}>
-              edit student
-            </button>
-          )
-        }
+        {!isEdit && (
+          <button className="btn" onClick={() => setIsEdit(!isEdit)}>
+            edit student
+          </button>
+        )}
         <button className="btn" onClick={() => removeStudent(student.id)}>
           remove student
         </button>
       </div>
-      
     </div>
   );
 }

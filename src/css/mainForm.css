@@ -1,6 +1,5 @@
 .container form .main-form {
   width: 100%;
-
 }
 
 .container form .main-form-inputs {
@@ -11,12 +10,6 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
-
-
-
-
-
-
 
 .container .your-students {
   font-size: 2em;
@@ -84,12 +77,13 @@
   height: 100%;
   left: 0;
   top: 0;
+
   &:checked {
     background-color: rgba(0, 128, 0, 0.347);
   }
   cursor: pointer;
-
 }
+
 .days-holder .form-row label,
 .months-holder .form-row label {
   padding: 5px;

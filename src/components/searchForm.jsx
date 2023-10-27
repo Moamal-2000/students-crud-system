@@ -1,11 +1,10 @@
-import { useGlobalContextFunc } from "../contexts/globalContext";
+import { useGlobalContextFunc } from "../contexts/GlobalContext";
 
-import "../css/searchForm.css"
+import "../css/SearchForm.css";
 
 const SearchForm = () => {
   const { renderMainForm, setRenderMainForm, students, setStudentsClone } =
     useGlobalContextFunc();
-
 
   const searchFunction = (e) => {
     const form = new FormData(e.target);
@@ -16,7 +15,6 @@ const SearchForm = () => {
 
     e.preventDefault();
 
-
     if (isSearchInpEmpty) {
       setStudentsClone([...students]);
       return;
@@ -24,7 +22,7 @@ const SearchForm = () => {
 
     const searchResult = students.filter((student) => {
       const searchValue = entries.SearchInputValue.toLowerCase();
-      const studentName = student[entries["search-by"]].toLowerCase()
+      const studentName = student[entries["search-by"]].toLowerCase();
       const isStudentExist = studentName.startsWith(searchValue);
       return isStudentExist;
     });
@@ -32,7 +30,6 @@ const SearchForm = () => {
     setStudentsClone(searchResult);
     e.target.reset();
   };
-
 
   return (
     <div className="form-container">

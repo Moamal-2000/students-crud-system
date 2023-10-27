@@ -1,22 +1,15 @@
 import { useEffect, useRef } from "react";
-import { useGlobalContextFunc } from "../contexts/globalContext";
-import "../css/menu.css";
-
+import { useGlobalContextFunc } from "../contexts/GlobalContext";
+import "../css/Menu.css";
 
 function Menu() {
-  const {
-     showMenu,
-     setStudents,
-     setStudentsClone,
-     setShowMenu
-   } = useGlobalContextFunc();
+  const { showMenu, setStudents, setStudentsClone, setShowMenu } =
+    useGlobalContextFunc();
   const menu = useRef(null);
-
 
   useEffect(() => {
     showMenu ? showMenuFunc() : hideMenuFunc();
   }, [showMenu]);
-
 
   const showMenuFunc = () => {
     menu.current.classList.add("active");
@@ -27,14 +20,12 @@ function Menu() {
     }, 1500);
   };
 
-
   const hideMenuFunc = () => {
     setTimeout(() => menu.current.classList.remove("active"), 500);
 
     const menuItemsEle = [...menu.current.children[0].children];
     menuItemsEle.forEach((li) => li.classList.remove("show"));
   };
-
 
   return (
     <div ref={menu} className="menu">
@@ -46,11 +37,13 @@ function Menu() {
         </li>
 
         <li>premium edition is on the way</li>
-        <li onClick={()=> {
-          setStudents([])
-          setStudentsClone([])
-          setShowMenu(!showMenu)
-        }}>
+        <li
+          onClick={() => {
+            setStudents([]);
+            setStudentsClone([]);
+            setShowMenu(!showMenu);
+          }}
+        >
           remove all data
         </li>
       </ul>

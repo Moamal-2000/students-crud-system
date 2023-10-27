@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { useGlobalContextFunc } from "../contexts/globalContext";
-import Student from "./student";
+import { useGlobalContextFunc } from "../contexts/GlobalContext";
+import Student from "./Student";
 
 const Students = () => {
   const { studentsClone, students } = useGlobalContextFunc();
