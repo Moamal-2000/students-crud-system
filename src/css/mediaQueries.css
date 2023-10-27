@@ -1,0 +1,8 @@
+@media (max-width: 600px) {
+  div.footer div {
+    flex-direction: column;
+    &  * {
+      margin-top: 20px;
+    }
+  }
+}

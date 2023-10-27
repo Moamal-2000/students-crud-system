@@ -1,0 +1,99 @@
+.container form .main-form {
+  width: 100%;
+
+}
+
+.container form .main-form-inputs {
+  width: 100%;
+  text-transform: capitalize;
+  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+
+
+
+
+
+
+.container .your-students {
+  font-size: 2em;
+  margin: 30px 0;
+  padding-bottom: 10px;
+  border-bottom: 2px white solid;
+  width: fit-content;
+}
+
+.container form.dataForm .btn {
+  background-color: var(--mainColor);
+}
+
+.table-infos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.days-holder,
+.months-holder {
+  width: 100%;
+  display: grid;
+  height: fit-content;
+  padding: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 10px;
+  background-color: var(--darkGrey);
+  position: relative;
+  margin-top: 20px;
+
+  & p {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -120%);
+    font-size: 2em;
+    width: 100%;
+  }
+}
+
+.days-holder .form-row,
+.months-holder .form-row {
+  height: fit-content;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  border: 5px solid var(--black);
+  margin: 0;
+  position: relative;
+
+}
+
+.days-holder .form-row input[type="checkbox"],
+.months-holder .form-row input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  &:checked {
+    background-color: rgba(0, 128, 0, 0.347);
+  }
+  cursor: pointer;
+
+}
+.days-holder .form-row label,
+.months-holder .form-row label {
+  padding: 5px;
+  z-index: 12;
+  cursor: pointer;
+
+}

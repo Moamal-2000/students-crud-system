@@ -3,6 +3,7 @@ import { useGlobalContextFunc } from "../contexts/globalContext";
 import StudentDefaultMode from "./studentDefaultMode";
 import StudentEditMode from "./studentEditMode";
 import StudentTable from "./studentTable";
+import "../css/student.css"
 
 function Student({ student, index }) {
   const { removeStudent } = useGlobalContextFunc();
@@ -40,15 +41,19 @@ function Student({ student, index }) {
           student={student}
         />
       )}
-
-      {!isEdit && (
-        <button className="btn" onClick={() => setIsEdit(!isEdit)}>
-          edit student
+      <div className="btns-holder">
+        {
+          !isEdit && (
+            <button className="btn" onClick={() => setIsEdit(!isEdit)}>
+              edit student
+            </button>
+          )
+        }
+        <button className="btn" onClick={() => removeStudent(student.id)}>
+          remove student
         </button>
-      )}
-      <button className="btn" onClick={() => removeStudent(student.id)}>
-        remove student
-      </button>
+      </div>
+      
     </div>
   );
 }

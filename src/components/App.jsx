@@ -6,7 +6,7 @@ import Footer from "./footer";
 import MainForm from "./mainForm";
 import Menu from "./menu";
 import SearchForm from "./searchForm";
-
+import "../css/mediaQueries.css"
 function App() {
   const { renderMainForm } = useGlobalContextFunc();
 

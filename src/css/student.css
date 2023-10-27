@@ -1,0 +1,104 @@
+.container .studentsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 100px;
+
+}
+
+.container .studentsContainer .student {
+  width: 100%;
+  border-radius: 16px;
+  border: solid 3px var(--mainColor);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.container .studentsContainer .student .studentDataHolder {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  height: 350px;
+  overflow: auto;
+  border: 2px solid var(--mainColor);
+  padding: 10px;
+  border-radius: 5px;
+
+  &::-webkit-scrollbar {
+    scroll-behavior: smooth;
+    height: 10px;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    scroll-behavior: smooth;
+    width: 200px;
+    background-color: red;
+    border-radius: 10px;
+    background-color: var(--grey);
+  }
+  &::-webkit-scrollbar-corner {
+    width: 0;
+    height: 0;
+  }
+}
+
+.container .studentsContainer .student .studentDataHolder p {
+  font-size: 1.5em;
+  letter-spacing: .5px;
+  margin: 10px 0;
+  margin-right: 10px;
+}
+
+.container .studentsContainer .student .studentDataHolder form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+
+  & div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & input {
+      margin-left: 10px;
+    }
+  }
+}
+
+.student span.order {
+  width: fit-content;
+  height: 50px;
+  background-color: var(--mainColor);
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom-right-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-weight: 600;
+}
+
+
+.container .studentsContainer>p {
+  text-align: center;
+  width: 100%;
+  font-size: 3em;
+  letter-spacing: .5px;
+}
+.student .btns-holder {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  gap: 20px;
+}

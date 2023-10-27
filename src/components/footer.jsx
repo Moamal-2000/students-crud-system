@@ -1,5 +1,6 @@
 import react from "../imgs/react.svg";
 import vite from "../imgs/vite.svg";
+import "../css/footer.css"
 
 function Footer() {
   return (

@@ -1,0 +1,28 @@
+.container form.search-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.container form.search-form p {
+  font-size: 2.5em;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.container form.search-form select {
+  width: fit-content;
+  height: 40px;
+  text-transform: capitalize;
+  outline: none;
+  border: none;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  background-color: var(--mainColor);
+  color: white;
+  border-radius: 5px;
+  background-color: var(--black);
+  border: var(--mainColor) 2px solid;
+
+}

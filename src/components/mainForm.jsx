@@ -3,6 +3,8 @@ import { useGlobalContextFunc } from "../contexts/globalContext";
 import { days, months } from "../data/staticData";
 import tableDataSetter from "../hooks/tableDataSetter";
 
+import "../css/mainForm.css"
+
 function MainForm() {
   const {
     students,

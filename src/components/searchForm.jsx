@@ -1,5 +1,7 @@
 import { useGlobalContextFunc } from "../contexts/globalContext";
 
+import "../css/searchForm.css"
+
 const SearchForm = () => {
   const { renderMainForm, setRenderMainForm, students, setStudentsClone } =
     useGlobalContextFunc();
