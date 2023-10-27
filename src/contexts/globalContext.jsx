@@ -43,6 +43,8 @@ function GlobalContext  ({children})  {
     setStudents(students.filter(student => student.id != id))
     setStudentsClone(students.filter(student => student.id != id))
   }
+
+
   const contextValues = {
     tableDataChanger,
     removeStudent,
@@ -54,7 +56,7 @@ function GlobalContext  ({children})  {
     setStudentsClone,
     updateStudentData,
     showMenu,
-    setShowMenu
+    setShowMenu,
   }
   return (
     <Context.Provider value={contextValues}>

@@ -28,6 +28,7 @@
   font-weight: 600;
   opacity: 0;
   transition: 1s;
+  cursor: pointer;
   &.show {
     opacity: 1;
   }

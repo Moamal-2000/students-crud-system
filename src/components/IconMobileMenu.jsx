@@ -1,15 +1,19 @@
+import { useEffect, useRef } from "react";
 import { useGlobalContextFunc } from "../contexts/globalContext";
 
 const IconMenu = () => {
   const { showMenu, setShowMenu } = useGlobalContextFunc();
 
-  const menuToggle = (e) => {
-    e.currentTarget.classList.toggle("close");
-    setShowMenu(!showMenu);
-  };
+  useEffect(()=> {
+    showMenu ?  menuIcon.current.classList.add("close") :
+    menuIcon.current.classList.remove("close")
+
+  },[showMenu])
+
+  let menuIcon = useRef(null)
 
   return (
-    <span onClick={menuToggle} className="menuIcon">
+    <span ref={menuIcon} onClick={()=> setShowMenu(!showMenu)} className="menuIcon">
       <span>
         <i></i>
         <i></i>

@@ -2,8 +2,14 @@ import { useEffect, useRef } from "react";
 import { useGlobalContextFunc } from "../contexts/globalContext";
 import "../css/menu.css";
 
+
 function Menu() {
-  const { showMenu } = useGlobalContextFunc();
+  const {
+     showMenu,
+     setStudents,
+     setStudentsClone,
+     setShowMenu
+   } = useGlobalContextFunc();
   const menu = useRef(null);
 
 
@@ -40,6 +46,13 @@ function Menu() {
         </li>
 
         <li>premium edition is on the way</li>
+        <li onClick={()=> {
+          setStudents([])
+          setStudentsClone([])
+          setShowMenu(!showMenu)
+        }}>
+          remove all data
+        </li>
       </ul>
     </div>
   );
